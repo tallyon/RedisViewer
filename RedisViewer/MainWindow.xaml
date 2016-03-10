@@ -1,0 +1,55 @@
+﻿<Window x:Class="RedisViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedisViewer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="820" Width="1200" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- INPUT FIELD -->
+        <Label x:Name="labelKey" Content="Message&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Grid.Row="0" Grid.Column="0"/>
+        <TextBox x:Name="textBoxMessage" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="371" 
+                 Grid.Row="0" Grid.Column="0"/>
+        <Button x:Name="buttonSendMessage" Content="Send" HorizontalAlignment="Left" Margin="386,36,0,0" VerticalAlignment="Top" Width="75" Click="SendCommandToRedis" 
+                Height="23" Grid.Row="0" Grid.Column="0"/>
+        <Button x:Name="buttonGetKeys" Content="Get keys" HorizontalAlignment="Left" Margin="466,36,0,0" VerticalAlignment="Top" Width="75" Click="PrintKeys" 
+                Height="23" Grid.Row="0" Grid.Column="0"/>
+
+        <!-- TREE VIEW -->
+        <Label x:Name="labelTreeView" Content="TreeView" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0"/>
+        <TreeView x:Name="treeView_Copy" HorizontalAlignment="Left" Margin="10, 40, 10, 10" Height="650" Width="560"  VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+        </TreeView>
+
+        <!-- OLD TREE VIEW WITH BINDING -->
+        <TreeView x:Name="treeView" HorizontalAlignment="Left" Height="353" Margin="543,36,-10,0" VerticalAlignment="Top" Width="639" Visibility="Hidden">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TreeViewItem Header="{Binding Path=Key}">
+                            <TreeViewItem Header="{Binding Path=Value}"/>
+                        </TreeViewItem>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <!-- OUTPUT LOG -->
+        <Label x:Name="labelOutput" Content="Output" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name="buttonClearOutput" Content="Clear output" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" Width="82" Click="ClearOutputBox"
+                Grid.Row="2" Grid.Column="1"/>
+        <TextBlock x:Name="textBlockOutput" HorizontalAlignment="Left" Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Height="276" Width="566" 
+                   Grid.Column="1" Grid.Row="2"/>
+
+    </Grid>
+</Window>

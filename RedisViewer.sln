@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisViewer.WPF", "RedisViewer\RedisViewer.WPF.csproj", "{2BD94AF6-7D4B-4375-B0E9-881F134D1225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisViewer.LIB", "RedisViewer.LIB\RedisViewer.LIB.csproj", "{0F3DC1F5-A7D0-488F-BF6A-BCE09077AF9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD94AF6-7D4B-4375-B0E9-881F134D1225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD94AF6-7D4B-4375-B0E9-881F134D1225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD94AF6-7D4B-4375-B0E9-881F134D1225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD94AF6-7D4B-4375-B0E9-881F134D1225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3DC1F5-A7D0-488F-BF6A-BCE09077AF9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3DC1F5-A7D0-488F-BF6A-BCE09077AF9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3DC1F5-A7D0-488F-BF6A-BCE09077AF9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3DC1F5-A7D0-488F-BF6A-BCE09077AF9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+﻿<Window x:Class="RedisViewer.UnableToConnectPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RedisViewer"
+        mc:Ignorable="d"
+        Title="UnableToConnectPopup" Height="170" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock x:Name="popupInfo" Text="Unable to connect" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="10"/>
+        <Button x:Name="btnOK" Content="OK" Grid.Row="1" Grid.Column="1" Margin="15" Click="btnOK_Click"/>
+    </Grid>
+</Window>
